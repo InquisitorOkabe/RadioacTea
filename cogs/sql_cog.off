@@ -1,0 +1,15 @@
+from discord.ext import commands
+import sqlite3 as sql
+
+class SQL_Cog(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+
+    # Получение данных о себе из БД, если они есть.
+    @commands.command()
+    async def check(self, ctx):
+        pass
+
+async def setup(client):
+    await client.add_cog(SQL_Cog(client))
